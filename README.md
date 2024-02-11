@@ -11,7 +11,7 @@
 
 ## Figma
 
-[R'Group]([https://www.figma.com/](https://www.figma.com/file/6jSrYqVtIoz97gzjkvtOwI/Javi-Becerril's-team-library?type=design&node-id=2311%3A2&mode=dev&t=Iij0jdks5Uc5aqh0-1))
+[R'Group](<[https://www.figma.com/](https://www.figma.com/file/6jSrYqVtIoz97gzjkvtOwI/Javi-Becerril's-team-library?type=design&node-id=2311%3A2&mode=dev&t=Iij0jdks5Uc5aqh0-1)>)
 
 ## Node.js
 
