@@ -19,35 +19,16 @@ const Mission = () => {
       {/* Content container with 2/3 width */}
       <div className="w-1/2 bg-neutral-300 flex flex-col justify-center items-center">
         <div className="text-center">
-          <p
-            style={{
-              lineHeight: "2",
-              margin: "0",
-              marginTop: "10px",
-              marginRight: "20px",
-            }}
-          >
-            <span
-              style={{
-                color: "blue",
-                fontWeight: "bold",
-                fontFamily: "Georgia, sans-serif",
-                fontSize: "38px",
-              }}
-            >
-              OUR MISSION: <br />
-            </span>
+          <p className="text-blue-500 font-bold font-serif text-2xl md:text-3xl lg:text-4xl leading-8 m-0 mt-10 mr-20">
+            OUR MISSION: <br />
           </p>
           {/* Empty space column with 1/6 width */}
           <div className="w-1/6"></div>
-          <p style={{ lineHeight: "2", margin: "0", marginRight: "10px" }}>
-            <span style={{ fontFamily: "Arial, sans-serif", fontSize: "22px" }}>
-              This mission is to provide a transparent way for students to get
-              housing, and understand living conditions. We eliminate the
-              hurdles of confusing interfaces like Redfin or Zillow and help
-              students find student-reviewed houses without navigating confusing
-              sites.
-            </span>
+          <p className="font-sans text-lg md:text-xl lg:text-2xl leading-8 m-0 mr-10">
+            This mission is to provide a transparent way for students to get
+            housing, and understand living conditions. We eliminate the hurdles
+            of confusing interfaces like Redfin or Zillow and help students find
+            student-reviewed houses without navigating confusing sites.
           </p>
         </div>
       </div>
