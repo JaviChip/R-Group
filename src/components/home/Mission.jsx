@@ -14,7 +14,7 @@ const Mission = () => {
       </div>
 
       {/* Empty space column with 1/6 width */}
-      <div className="w-1/6"></div>
+      <div className="pr-5"></div>
 
       {/* Content container with 2/3 width */}
       <div className="w-1/2 bg-neutral-300 flex flex-col justify-center items-center">
