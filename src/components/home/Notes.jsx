@@ -30,7 +30,6 @@ const Notes = () => {
             online.
           </p>
         </div>
-
       </div>
 
       <div className="w-1/3 mt-6 mb-6 pr-8">
