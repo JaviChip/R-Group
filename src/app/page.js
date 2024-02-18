@@ -1,11 +1,6 @@
 import React from "react";
-import Mission from "@/components/home/Mission";
 const Home = () => {
-  return (
-    <div>
-      <Mission />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Home;
