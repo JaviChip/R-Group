@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Contributers = () => {
   return (
     <div className="bg-neutral-300 flex w-full justify-center items-center">
@@ -13,7 +12,7 @@ const Contributers = () => {
             Contributers: <br />
           </p>
           {/* Paragraph with added padding */}
-            <ul>
+          <ul>
             <li>Cody Lin</li>
             <li>Kobe Ying</li>
             <li>Arnav Swami</li>
@@ -21,12 +20,11 @@ const Contributers = () => {
             <li>Soorya Saravanan</li>
             <li>Yashmit Singh</li>
             <li>Wilson Law</li>
-            </ul>
+          </ul>
 
           <br />
         </div>
       </div>
-
     </div>
   );
 };
