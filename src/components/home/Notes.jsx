@@ -13,7 +13,7 @@ const Notes = () => {
       {/* Content container with 2/3 width */}
       <div className="w-1/3 bg-neutral-300 flex flex-col justify-center items-center">
         <div className="text-center">
-          <p className="text-blue-500 font-bold font-serif text-2xl md:text-3xl lg:text-4xl leading-8 m-0 mt-10 mr-20">
+          <p className="text-blue-700 font-bold font-serif text-2xl md:text-3xl lg:text-4xl leading-8 m-0 mt-10 mr-20">
             Notes For User: <br />
           </p>
           {/* Paragraph with added padding */}

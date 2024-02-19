@@ -7,7 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import Image from "next/image";
-import RLogo from "../public/home/R-Nav.svg";
+import RLogo from "../public/home/R-Logo.png";
 
 const Navigation = () => {
   const [selected, setSelected] = useState("");
@@ -16,7 +16,7 @@ const Navigation = () => {
       collapseOnSelect
       expand="md"
       fixed="top"
-      className="w-full m-0 md:min-h-[5vh] p-0 bg-gray-300 bg-opacity-80 justify-between items-center backdrop-blur-sm"
+      className="w-full m-0 md:min-h-[5vh] p-0 bg-blue-800 bg-opacity-90 justify-between items-center backdrop-blur-sm"
     >
       <Navbar.Brand className="p-0">
         <Link
@@ -26,7 +26,7 @@ const Navigation = () => {
           href="/"
           onClick={() => setSelected("")}
         >
-          <Image src={RLogo} className=" w-20 h-20 my-2 ml-1" alt="R-logo" />
+          <Image src={RLogo} className=" w-16 h-20 my-2 ml-1" alt="R-logo" />
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle
@@ -45,7 +45,7 @@ const Navigation = () => {
               onClick={() => {
                 setSelected(item.name);
               }}
-              className={`hover:cursor-pointer mb-0 py-1 px-4 !font-medium !text-blue-900 text-xl whitespace-nowrap hover:!text-yellow-500 duration-300 ${
+              className={`hover:cursor-pointer mb-0 py-1 px-4 !font-medium !text-yellow-500 text-xl whitespace-nowrap hover:!text-blue-950 duration-300 ${
                 selected === item.name ? "underline" : "no-underline"
               }`}
             >
