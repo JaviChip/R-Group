@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contributers = () => {
+const Contributors = () => {
   return (
     <div className="bg-neutral-300 flex w-full justify-center items-center">
       {/* Image container with 1/3 width and added padding */}
@@ -29,4 +29,4 @@ const Contributers = () => {
   );
 };
 
-export default Contributers;
+export default Contributors;
