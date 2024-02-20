@@ -12,7 +12,7 @@ const Contributers = () => {
             Contributers: <br />
           </p>
           {/* Paragraph with added padding */}
-          <ul>
+          <ul className="font-sans text-lg md:text-xl lg:text-2xl pl-8 m-0 mr-10 mt-4 bg-neutral-300">
             <li>Cody Lin</li>
             <li>Kobe Ying</li>
             <li>Arnav Swami</li>
