@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
+"use client";
+import React, { useState } from 'react';
+import { StarIcon } from '@heroicons/react/solid';
 
 const StarButton = () => {
   const [isFavorited, setIsFavorited] = useState(false);
@@ -9,13 +10,8 @@ const StarButton = () => {
   };
 
   return (
-    <button
-      onClick={toggleFavorite}
-      className={`text-2xl ${
-        isFavorited ? "text-yellow-500" : "text-red-500"
-      } transition-colors duration-150 ease-in-out`}
-    >
-      <FaStar />
+    <button onClick={toggleFavorite} className="focus:outline-none">
+      <StarIcon className={`h-6 w-6 ${isFavorited ? 'text-yellow-500' : 'text-red-500'}`} />
     </button>
   );
 };
