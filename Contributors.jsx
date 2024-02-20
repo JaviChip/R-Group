@@ -8,8 +8,8 @@ const Contributers = () => {
       {/* Content container with 2/3 width */}
       <div className="w-1/3 bg-neutral-300 flex flex-col justify-center items-center">
         <div className="text-center">
-          <p className="text-blue-500 font-bold font-serif text-2xl md:text-3xl lg:text-4xl leading-8 m-0 mt-10 mr-20">
-            Contributers: <br />
+          <p className="text-blue-800 font-bold font-serif text-2xl md:text-3xl lg:text-4xl leading-8 m-0 mt-10 mr-20">
+            Contributors: <br />
           </p>
           {/* Paragraph with added padding */}
           <ul className="font-sans text-lg md:text-xl lg:text-2xl pl-8 m-0 mr-10 mt-4 bg-neutral-300">
