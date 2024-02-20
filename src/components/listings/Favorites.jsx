@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { FaStar } from "react-icons/fa"; // using react-icons for the star icon
+import { FaStar } from "react-icons/fa";
 
 const StarButton = () => {
   const [isFavorited, setIsFavorited] = useState(false);
 
   const toggleFavorite = () => {
     setIsFavorited(!isFavorited);
-    // Here you would also handle the logic to save the favorite status to your future backend or local storage
   };
 
   return (
