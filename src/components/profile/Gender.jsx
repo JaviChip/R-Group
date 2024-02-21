@@ -1,39 +1,20 @@
 import React from "react";
 
 const mockDatabase = {
-  "John Doe": "Male",
-  "Jane Doe": 25,
+  "John Doe": "apache helicopter",
 };
 
 const Gender = ({ name }) => {
   const Gender = mockDatabase[name];
 
-  const containerStyle = {
-    backgroundColor: "gray",
-    color: "white",
-    padding: "10px",
-    borderRadius: "5px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    width: "200px",
-    marginLeft: "500px",
-    marginTop: "-55px",
-  };
-
-  const ageDisplayStyle = {
-    backgroundColor: "white",
-    color: "black",
-    padding: "5px 10px",
-    borderRadius: "5px",
-    flexGrow: 1,
-    marginLeft: "10px",
-  };
-
   return (
-    <div style={containerStyle}>
-      <span>Gender:</span>
-      <span style={ageDisplayStyle}>{Gender ?? "N/A"}</span>
+    // Component container with rounded corners, shadow, and spacing
+    <div className="max-w-sm mx-auto mt-10 p-6 bg-white border border-gray-200 rounded-lg shadow-md">
+      <span className="text-lg font-medium text-gray-900">Gender: </span>
+      {/* Zip code with standout styling */}
+      <span className="ml-2 p-2 bg-blue-100 text-blue-800 text-sm font-semibold rounded border border-blue-200">
+        {Gender ?? "N/A"}
+      </span>
     </div>
   );
 };
