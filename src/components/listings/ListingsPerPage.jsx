@@ -1,27 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const ListingsPerPage = () => {
-  const [listings, setListings] = useState([]);
+  const [perPage, setPerPage] = useState("");
 
-  // Simulated fetch function (replace with your actual fetch logic)
-  useEffect(() => {
-    const fetchListings = async () => {
-      // Simulated data, replace with actual data fetching logic
-      const data = Array.from({ length: 9 }, (_, index) => ({
-        id: index + 1,
-        title: `Listing ${index + 1}`,
-      }));
-
-      setListings(data);
-    };
-
-    fetchListings();
-  }, []);
+  const handlePerPageChange = (e) => {
+    setPerPage(e.target.value);
+  };
 
   return (
     <div>
-      {/* Render the number of listings */}
-      <p>Number of listings: {listings.length}</p>
+      <label htmlFor="perPageDropdown">Listings per page: </label>
+      <select
+        id="perPageDropdown"
+        onChange={handlePerPageChange}
+        value={perPage}
+      >
+        <option value="">Select...</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+      </select>
     </div>
   );
 };

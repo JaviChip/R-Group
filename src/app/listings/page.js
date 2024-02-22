@@ -1,4 +1,5 @@
 "use client";
+import Results from "@/components/listings/Results";
 import ListingsPerPage from "@/components/listings/ListingsPerPage";
 const Listings = () => {
   return (
@@ -8,6 +9,7 @@ const Listings = () => {
         Listings page content
         <br />
         <div className="text-center mt-0">
+          <Results />
           <ListingsPerPage />
         </div>
       </div>
