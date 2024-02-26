@@ -1,52 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import Link from "next/link";
 import { StarIcon } from "@heroicons/react/solid";
 
 const Reviews = () => {
-  const [isFavorited, setIsFavorited] = useState(false);
-
-  const toggleFavorite = () => {
-    setIsFavorited(!isFavorited);
-  };
-
   return (
     <div className="bg-black p-3 inline-flex items-center space-x-1">
       <span className="text-white font-bold">Reviews</span>
-      <button onClick={toggleFavorite} className="focus:outline-none">
-        <StarIcon
-          className={`h-6 w-6 ${
-            isFavorited ? "text-yellow-500" : "text-red-500"
-          }`}
-        />
-      </button>
-      <button onClick={toggleFavorite} className="focus:outline-none">
-        <StarIcon
-          className={`h-6 w-6 ${
-            isFavorited ? "text-yellow-500" : "text-red-500"
-          }`}
-        />
-      </button>
-      <button onClick={toggleFavorite} className="focus:outline-none">
-        <StarIcon
-          className={`h-6 w-6 ${
-            isFavorited ? "text-yellow-500" : "text-red-500"
-          }`}
-        />
-      </button>
-      <button onClick={toggleFavorite} className="focus:outline-none">
-        <StarIcon
-          className={`h-6 w-6 ${
-            isFavorited ? "text-yellow-500" : "text-red-500"
-          }`}
-        />
-      </button>
-      <button onClick={toggleFavorite} className="focus:outline-none">
-        <StarIcon
-          className={`h-6 w-6 ${
-            isFavorited ? "text-yellow-500" : "text-red-500"
-          }`}
-        />
-      </button>
+      <Link href="/listings">
+        <div className="flex focus:outline-none">
+          {[...Array(5)].map((_, index) => (
+            <StarIcon key={index} className="h-6 w-6 text-red-500" />
+          ))}
+        </div>
+      </Link>
     </div>
   );
 };
