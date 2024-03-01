@@ -8,6 +8,7 @@ import Link from "next/link";
 import { FaBars } from "react-icons/fa";
 import Image from "next/image";
 import RLogo from "../public/home/R-Logo.png";
+import Banner from "./home/Banner";
 
 const Navigation = () => {
   const [selected, setSelected] = useState("");
@@ -27,6 +28,7 @@ const Navigation = () => {
           onClick={() => setSelected("")}
         >
           <Image src={RLogo} className=" w-16 h-20 my-2 ml-1" alt="R-logo" />
+          <Banner />
         </Link>
       </Navbar.Brand>
       <Navbar.Toggle
