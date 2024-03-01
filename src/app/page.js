@@ -10,7 +10,6 @@ const Home = () => {
         <Mission />
         <StarButton />
       </div>
-      <BoxWithButtons />
       <Notes />
     </div>
   );
