@@ -14,8 +14,8 @@ import Zip from "../../components/profile/Zip";
 const ProfilePage = () => {
   return (
     <div>
-      <h1>Profile Page</h1>
       {/* Example usage with a hardcoded name */}
+      <h1>Profile Page</h1>
       <HousingStatus name="John Doe" />
       <City name="John Doe" />
       <Street name="John Doe" />
