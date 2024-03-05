@@ -11,4 +11,8 @@ export const items = [
     name: "PROFILE",
     link: "profile",
   },
+  {
+    name: "Sign In or Sign Up",
+    link: "logIn",
+  },
 ];
