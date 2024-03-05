@@ -1,14 +1,7 @@
-// src/SignIn.js
 "use client";
 import React, { useState } from "react";
-import { auth, app } from "../../../firebase-config";
-import {
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
-import { getFirestore, doc, setDoc } from "firebase/firestore"; // Import the functions needed to interact with Firestore
-
-const db = getFirestore(app);
+import { auth } from "../../../firebase-config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -25,32 +18,11 @@ function SignIn() {
         password
       );
       console.log(userCredential);
-      // User signed in successfully, you might want to redirect them or do something else here
-      // Optionally, update or push user info to Firestore as shown previously
+      // User signed in successfully, handle next steps here
     } catch (error) {
-      if (error.code === "auth/invalid-credential") {
-        // Attempt to sign up the user since they do not exist
-        try {
-          const newUserCredential = await createUserWithEmailAndPassword(
-            auth,
-            email,
-            password
-          );
-          // New user created successfully, you might want to redirect them or do something else here
-          // Optionally, add new user info to Firestore here
-          const user = newUserCredential.user;
-          const userRef = doc(db, "users", user.uid);
-          await setDoc(
-            userRef,
-            {
-              email: user.email,
-              createdAt: new Date(), // Additional initial user information can be added here
-            },
-            { merge: true }
-          );
-        } catch (signupError) {
-          setError(signupError.message); // Handle sign-up errors (e.g., weak password)
-        }
+      if (error.code === "auth/user-not-found") {
+        // Direct the user to sign up since the account does not exist
+        setError("Account does not exist. Please create an account.");
       } else {
         setError(error.message); // Handle other sign-in errors
       }
@@ -94,14 +66,21 @@ function SignIn() {
             />
           </div>
           {error && <p className="text-red-500 text-xs">{error}</p>}
-          <button type="submit">
-            <a
-              href="/profile"
-              className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              Sign In / Sign Up
+          <button
+            type="submit"
+            className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            <a href="/profile" className="text-white">
+              Sign In
             </a>
           </button>
+          <p className="text-center mt-2">
+            {"Don't have an account? "}
+            {/* Adjust the path as per your routing setup */}
+            <a href="/signUp" className="text-blue-500 hover:text-blue-600">
+              Create an account
+            </a>
+          </p>
         </form>
       </div>
     </div>
