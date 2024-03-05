@@ -1,14 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { auth, app } from "../../../firebase-config";
-import {
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
-import { Link } from "react-router-dom"; // Import Link component for navigation (if using React Router)
-
-const db = getFirestore(app);
+import { auth } from "../../../firebase-config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -19,7 +12,11 @@ function SignIn() {
     e.preventDefault();
     setError("");
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       console.log(userCredential);
       // User signed in successfully, handle next steps here
     } catch (error) {
@@ -37,7 +34,10 @@ function SignIn() {
       <div className="p-6 bg-white shadow-md rounded">
         <form onSubmit={handleSignIn} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Email
             </label>
             <input
@@ -50,7 +50,10 @@ function SignIn() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
               Password
             </label>
             <input
@@ -63,13 +66,16 @@ function SignIn() {
             />
           </div>
           {error && <p className="text-red-500 text-xs">{error}</p>}
-          <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+          <button
+            type="submit"
+            className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
             <a href="/profile" className="text-white">
-            Sign In
+              Sign In
             </a>
           </button>
           <p className="text-center mt-2">
-            Don't have an account? &nbsp;&nbsp;
+            {"Don't have an account? "}
             {/* Adjust the path as per your routing setup */}
             <a href="/signUp" className="text-blue-500 hover:text-blue-600">
               Create an account

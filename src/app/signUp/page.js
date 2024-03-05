@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { auth, app } from "../../../firebase-config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
-import { Link } from "react-router-dom"; // For navigation back to the SignIn page
 
 const db = getFirestore(app);
 
@@ -20,33 +19,41 @@ function SignUp() {
   const [phone, setPhone] = useState("");
   const [street, setStreet] = useState("");
   const [year, setYear] = useState("");
-  const [zip, setZip] = useState("")
+  const [zip, setZip] = useState("");
   const [error, setError] = useState("");
 
   const handleSignUp = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      const newUserCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const newUserCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       console.log(newUserCredential);
       // New user created successfully, handle next steps here
       // For example, you might want to save additional user info to Firestore
       const user = newUserCredential.user;
       const userRef = doc(db, "users", user.uid);
-      await setDoc(userRef, {
-        Email: user.email, // You can add more user details here
-        createdAt: new Date(),
-        Age: age,
-        City: city,
-        Gender: gender,
-        HousingSatus: housingStatus,
-        Major: major,
-        Name: name,
-        Phone: phone,
-        Street: street,
-        Year: year,
-        Zip: zip,
-      }, { merge: true });
+      await setDoc(
+        userRef,
+        {
+          Email: user.email, // You can add more user details here
+          createdAt: new Date(),
+          Age: age,
+          City: city,
+          Gender: gender,
+          HousingSatus: housingStatus,
+          Major: major,
+          Name: name,
+          Phone: phone,
+          Street: street,
+          Year: year,
+          Zip: zip,
+        },
+        { merge: true }
+      );
       // Optionally, redirect the user or show a success message
     } catch (signupError) {
       setError(signupError.message); // Handle sign-up errors here
@@ -58,7 +65,10 @@ function SignUp() {
       <div className="p-6 bg-white shadow-md rounded">
         <form onSubmit={handleSignUp} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Email
             </label>
             <input
@@ -71,7 +81,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
               Password
             </label>
             <input
@@ -84,7 +97,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="age" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="age"
+              className="block text-sm font-medium text-gray-700"
+            >
               Age
             </label>
             <input
@@ -97,7 +113,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
               Name
             </label>
             <input
@@ -110,7 +129,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="gender" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="gender"
+              className="block text-sm font-medium text-gray-700"
+            >
               Gender
             </label>
             <input
@@ -123,7 +145,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="housingStatus" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="housingStatus"
+              className="block text-sm font-medium text-gray-700"
+            >
               Housing Status
             </label>
             <input
@@ -136,7 +161,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="city" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="city"
+              className="block text-sm font-medium text-gray-700"
+            >
               City
             </label>
             <input
@@ -149,7 +177,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="major" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="major"
+              className="block text-sm font-medium text-gray-700"
+            >
               Major
             </label>
             <input
@@ -162,7 +193,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-gray-700"
+            >
               Phone
             </label>
             <input
@@ -175,7 +209,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="year" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="year"
+              className="block text-sm font-medium text-gray-700"
+            >
               Year
             </label>
             <input
@@ -188,7 +225,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="street" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="street"
+              className="block text-sm font-medium text-gray-700"
+            >
               Street Address
             </label>
             <input
@@ -201,7 +241,10 @@ function SignUp() {
             />
           </div>
           <div>
-            <label htmlFor="zip" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="zip"
+              className="block text-sm font-medium text-gray-700"
+            >
               Zip Code
             </label>
             <input
@@ -214,16 +257,19 @@ function SignUp() {
             />
           </div>
           {error && <p className="text-red-500 text-xs">{error}</p>}
-          <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+          <button
+            type="submit"
+            className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
             <a href="/profile" className="text-white">
-                Create Account
+              Create Account
             </a>
           </button>
           <p className="text-center mt-2">
             Already have an account?&nbsp;&nbsp;
             {/* Adjust the path as per your routing setup */}
             <a href="/signIn" className="text-blue-500 hover:text-blue-600">
-                Sign in
+              Sign in
             </a>
           </p>
         </form>
