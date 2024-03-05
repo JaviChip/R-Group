@@ -13,7 +13,7 @@ import Zip from "../../components/profile/Zip";
 
 const ProfilePage = () => {
   return (
-    <div>
+    <div className="my-40">
       {/* Example usage with a hardcoded name */}
       <h1>Profile Page</h1>
       <HousingStatus name="John Doe" />
