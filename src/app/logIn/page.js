@@ -54,7 +54,7 @@ function SignIn() {
             <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} className="mt-1 p-2 w-full border border-gray-300 rounded shadow-sm" required />
           </div>
           {error && <p className="text-red-500 text-xs">{error}</p>}
-          <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600">Sign In / Sign Up</button>
+          <button type="submit"><a href="/profile" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600" >Sign In / Sign Up</a></button>
         </form>
       </div>
     </div>
