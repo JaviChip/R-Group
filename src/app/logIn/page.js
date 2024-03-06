@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { auth } from "../../../firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import ProfilePage from "../profile/page";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -20,7 +19,6 @@ function SignIn() {
       );
       console.log(userCredential);
       const userID = userCredential.user.uid;
-      //<ProfilePage userId={userCredential.user.uid}/>
       window.location.href = `/profile?${userID}`;
       // User signed in successfully, handle next steps here
     } catch (error) {

@@ -1,5 +1,5 @@
 // pages/profile.js
-'use client';
+"use client";
 import React from "react";
 import Age from "../../components/profile/Age";
 import City from "../../components/profile/City";
@@ -11,11 +11,9 @@ import Phone from "../../components/profile/Phone";
 import Street from "../../components/profile/Street";
 import Year from "../../components/profile/Year";
 import Zip from "../../components/profile/Zip";
-import { useParams } from 'react-router-dom';
 
 const ProfilePage = () => {
   const userId = window.location.href.substring(30);
-  //let uid = userId.substring(9);
   return (
     <div className="my-40">
       {/* Example usage with a hardcoded name */}
