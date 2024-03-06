@@ -52,7 +52,8 @@ function SignUp() {
           Year: year,
           Zip: zip,
         },
-        { merge: true }
+        { merge: true },
+        (window.location.href = "/profile")
       );
       // Optionally, redirect the user or show a success message
     } catch (signupError) {
@@ -261,9 +262,7 @@ function SignUp() {
             type="submit"
             className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
-            <a href="/profile" className="text-white">
-              Create Account
-            </a>
+            Create Account
           </button>
           <p className="text-center mt-2">
             Already have an account?&nbsp;&nbsp;
