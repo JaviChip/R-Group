@@ -18,6 +18,7 @@ function SignIn() {
         password
       );
       console.log(userCredential);
+      window.location.href = "/profile";
       // User signed in successfully, handle next steps here
     } catch (error) {
       if (error.code === "auth/user-not-found") {
@@ -70,9 +71,7 @@ function SignIn() {
             type="submit"
             className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
-            <a href="/profile" className="text-white">
-              Sign In
-            </a>
+            Sign In
           </button>
           <p className="text-center mt-2">
             {"Don't have an account? "}
