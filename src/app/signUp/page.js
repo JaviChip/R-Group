@@ -44,7 +44,7 @@ function SignUp() {
           Age: age,
           City: city,
           Gender: gender,
-          HousingSatus: housingStatus,
+          HousingStatus: housingStatus,
           Major: major,
           Name: name,
           Phone: phone,
@@ -54,7 +54,7 @@ function SignUp() {
         },
         { merge: true }
       );
-      window.location.href = "/profile";
+      window.location.href = "/logIn";
       // Optionally, redirect the user or show a success message
     } catch (signupError) {
       setError(signupError.message); // Handle sign-up errors here
@@ -267,7 +267,7 @@ function SignUp() {
           <p className="text-center mt-2">
             Already have an account?&nbsp;&nbsp;
             {/* Adjust the path as per your routing setup */}
-            <a href="/signIn" className="text-blue-500 hover:text-blue-600">
+            <a href="/logIn" className="text-blue-500 hover:text-blue-600">
               Sign in
             </a>
           </p>
