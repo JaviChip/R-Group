@@ -13,7 +13,10 @@ import Year from "../../components/profile/Year";
 import Zip from "../../components/profile/Zip";
 
 const ProfilePage = () => {
-  const userId = window.location.href.substring(30);
+  let userId = "MAEg37ufOCdZrrNhIiNv";
+  if (typeof window !== "undefined") {
+    userId = window.location.href.substring(30);
+  }
   return (
     <div className="my-40">
       {/* Example usage with a hardcoded name */}
