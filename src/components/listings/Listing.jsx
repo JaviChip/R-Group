@@ -4,7 +4,7 @@ import ContactSellerButton from "./ListingAttributes/Contact";
 import StarButton from "./ListingAttributes/FavoriteButton";
 import HousingType from "./ListingAttributes/HousingType";
 import LeaseTerm from "./ListingAttributes/LeaseTerm";
-// Need Maps Component
+import Maps from "./ListingAttributes/Maps";
 import Miles from "./ListingAttributes/Miles";
 import Rent from "./ListingAttributes/Rent";
 import Image from "next/image";
@@ -64,8 +64,16 @@ const Listing = ({ image, listing }) => {
           </div>
         </div>
 
-        <div className=" flex flex-col ml-4 mr-4 ">
-          <ContactSellerButton />
+        <div className=" flex flex-col ml-4 mr-2 ">
+          <div className="my-2">
+            {" "}
+            <ContactSellerButton />
+          </div>
+
+          <div className="my-2 w-full">
+            {" "}
+            <Maps />{" "}
+          </div>
         </div>
       </div>
     </div>
