@@ -10,7 +10,7 @@ const Age = ({ userId }) => {
 
   useEffect(() => {
     const fetchAge = async () => {
-      const docRef = doc(db, "users", "MAEg37ufOCdZrrNhIiNv"); // Replace 'userId' with the actual document ID when calling this component
+      const docRef = doc(db, "users", userId); // Replace 'userId' with the actual document ID when calling this component
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {

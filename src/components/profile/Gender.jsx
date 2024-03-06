@@ -10,7 +10,7 @@ const Gender = ({ userId }) => {
 
   useEffect(() => {
     const fetchGender = async () => {
-      const docRef = doc(db, "users", "MAEg37ufOCdZrrNhIiNv");
+      const docRef = doc(db, "users", userId);
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {

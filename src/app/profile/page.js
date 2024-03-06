@@ -1,4 +1,5 @@
 // pages/profile.js
+"use client";
 import React from "react";
 import Age from "../../components/profile/Age";
 import City from "../../components/profile/City";
@@ -12,20 +13,24 @@ import Year from "../../components/profile/Year";
 import Zip from "../../components/profile/Zip";
 
 const ProfilePage = () => {
+  let userId = "MAEg37ufOCdZrrNhIiNv";
+  if (typeof window !== "undefined") {
+    userId = window.location.href.substring(30);
+  }
   return (
     <div className="my-40">
       {/* Example usage with a hardcoded name */}
       <h1>Profile Page</h1>
-      <HousingStatus name="John Doe" />
-      <City name="John Doe" />
-      <Street name="John Doe" />
-      <Zip name="John Doe" />
-      <Phone name="John Doe" />
-      <Gender name="John Doe" />
-      <Email name="John Doe" />
-      <Year name="John Doe" />
-      <Age name="John Doe" />
-      <Major name="John Doe" />
+      <HousingStatus userId={userId} />
+      <City userId={userId} />
+      <Street userId={userId} />
+      <Zip userId={userId} />
+      <Phone userId={userId} />
+      <Gender userId={userId} />
+      <Email userId={userId} />
+      <Year userId={userId} />
+      <Age userId={userId} />
+      <Major userId={userId} />
     </div>
   );
 };
