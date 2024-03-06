@@ -53,8 +53,8 @@ function SignUp() {
           Zip: zip,
         },
         { merge: true },
-        (window.location.href = "/profile")
       );
+      (window.location.href = "/profile")
       // Optionally, redirect the user or show a success message
     } catch (signupError) {
       setError(signupError.message); // Handle sign-up errors here
