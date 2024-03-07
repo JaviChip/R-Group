@@ -8,7 +8,15 @@ export const items = [
     link: "listings",
   },
   {
+    name: "ProfileFinder",
+    link: "profilefinder",
+  },
+  {
     name: "Sign In or Sign Up",
     link: "logIn",
+  },
+  {
+    name: "Write Review",
+    link: "writeReviews",
   },
 ];

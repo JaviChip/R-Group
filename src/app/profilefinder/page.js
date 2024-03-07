@@ -11,6 +11,8 @@ import Phone from "../../components/profile/Phone";
 import Street from "../../components/profile/Street";
 import Year from "../../components/profile/Year";
 import Zip from "../../components/profile/Zip";
+import Profile from "@/components/profilefinder/profile";
+import App from "@/components/profilefinder/App";
 
 const ProfileFinderPage = () => {
   let userId = "MAEg37ufOCdZrrNhIiNv";
@@ -31,6 +33,8 @@ const ProfileFinderPage = () => {
       <Year userId={userId} />
       <Age userId={userId} />
       <Major userId={userId} />
+      <Profile />
+      <App />
     </div>
   );
 };
