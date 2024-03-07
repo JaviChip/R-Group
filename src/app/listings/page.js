@@ -1,9 +1,9 @@
-import Listing from "@/components/listings/Listing";
 import FavoritesButton from "@/components/listings/FavoritesFilter";
 import Filters from "@/components/listings/Filters";
 import PageResults from "@/components/listings/Pages";
 import SearchBar from "@/components/listings/SearchBar";
 import ResultsNum from "@/components/listings/Results";
+import ListingApp from "@/components/listings/ListingApp";
 
 const Listings = () => {
   return (
@@ -30,12 +30,8 @@ const Listings = () => {
       </div>
 
       <div className="mt-16 mr-20 ml-5 mb-40 flex row-span-2">
-        <div className="ml-2 mr-3">
-          <Listing />
-        </div>
-
         <div className="mr-2 ml-3">
-          <Listing />
+          <ListingApp />
         </div>
       </div>
 
