@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const SearchBar = ({ placeholder, onSearchChange }) => {
+const ProfileSearchBar = ({ placeholder, onSearchChange }) => {
   return (
     <div className="flex border-2 border-gray-300 rounded-lg">
       <input
@@ -20,4 +20,4 @@ const SearchBar = ({ placeholder, onSearchChange }) => {
   );
 };
 
-export default SearchBar;
+export default ProfileSearchBar;
