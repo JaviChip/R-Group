@@ -28,7 +28,7 @@ const ProfileFinderPage = () => {
           </div>
         </div>
       </div>
-      <Profile />
+      {/* <Profile /> */}
       <App />
     </div>
   );
