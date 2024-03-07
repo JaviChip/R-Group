@@ -8,7 +8,6 @@ const Profile = ({ name, age, year, major, hobbies }) => {
         <p className="text-gray-700 text-base">Age: {age}</p>
         <p className="text-gray-700 text-base">Year: {year}</p>
         <p className="text-gray-700 text-base">Major: {major}</p>
-        <p className="text-gray-700 text-base">Hobbies: {hobbies}</p>
       </div>
     </div>
   );

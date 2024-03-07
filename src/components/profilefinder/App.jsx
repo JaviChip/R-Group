@@ -1,33 +1,22 @@
 import React from "react";
 import Profile from ".//profile";
+import { collection, query, getDocs, getFirestore } from "firebase/firestore";
+import { app } from "../../../firebase-config";
 
-const App = () => {
-  const users = [
-    {
-      id: 1,
-      name: "John Doe",
-      age: 20,
-      year: "Sophomore",
-      major: "Computer Science",
-      hobbies: ["Coding", "Chess", "Hiking"],
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      age: 22,
-      year: "Senior",
-      major: "Biology",
-      hobbies: ["Reading", "Gardening", "Painting"],
-    },
-    {
-      id: 3,
-      name: "Alice Johnson",
-      age: 21,
-      year: "Junior",
-      major: "Mathematics",
-      hobbies: ["Cycling", "Traveling", "Cooking"],
-    },
-  ];
+const db = getFirestore(app);
+const App = async () => {
+  const q = query(collection(db, "users"));
+  const querySnapshot = await getDocs(q);
+  const users = [];
+  querySnapshot.forEach((doc) => {
+    users.push({
+      id: doc.id,
+      name: doc.data().Name,
+      age: doc.data().Age,
+      year: doc.data().Year,
+      major: doc.data().Major,
+    });
+  });
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
@@ -38,7 +27,6 @@ const App = () => {
           age={user.age}
           year={user.year}
           major={user.major}
-          hobbies={user.hobbies}
         />
       ))}
     </div>
