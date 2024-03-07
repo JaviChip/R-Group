@@ -12,6 +12,7 @@ import Maps from "./ListingAttributes/Maps";
 import Miles from "./ListingAttributes/Miles";
 import Rent from "./ListingAttributes/Rent";
 import Image from "next/image";
+import Reviews from "./ListingAttributes/Reviews";
 import houseImage from "../../../src/public/home/houseimage.svg";
 
 const db = getFirestore(app);
@@ -89,8 +90,11 @@ const ListingApp = () => {
               <div className=" my-2">
                 <ContactSellerButton Phone={listing.Phone} />
               </div>
-              <div className="my-2 w-full">
+              <div className="my-2 ">
                 <Maps />
+              </div>
+              <div className="my-2 ">
+                <Reviews />
               </div>
             </div>
           </div>
