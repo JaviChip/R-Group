@@ -15,4 +15,8 @@ export const items = [
     name: "Sign In or Sign Up",
     link: "logIn",
   },
+  {
+    name: "Write Review",
+    link: "writeReviews",
+  },
 ];
