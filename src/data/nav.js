@@ -8,7 +8,7 @@ export const items = [
     link: "listings",
   },
   {
-    name: "ProfileFinder",
+    name: "FIND USER",
     link: "profilefinder",
   },
   {
