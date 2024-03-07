@@ -4,7 +4,6 @@ import React from "react";
 import ProfileSearchBar from "@/components/profilefinder/ProfileSearchBar";
 import ProfileFavoritesButton from "@/components/profilefinder/ProfileFavoritesFilter";
 import ProfileAttributesFilter from "@/components/profilefinder/ProfileAttributesFilter";
-import Profile from "@/components/profilefinder/profile";
 import App from "@/components/profilefinder/App";
 
 const ProfileFinderPage = () => {

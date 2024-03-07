@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from ".//profile";
-import { collection, query, getDocs, getFirestore, } from "firebase/firestore";
+import { collection, query, getDocs, getFirestore } from "firebase/firestore";
 import { app } from "../../../firebase-config";
 
 const db = getFirestore(app);
@@ -15,8 +15,8 @@ const App = async () => {
       age: doc.data().Age,
       year: doc.data().Year,
       major: doc.data().Major,
-    })
-  })
+    });
+  });
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
