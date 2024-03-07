@@ -3,6 +3,8 @@ import FavoritesButton from "@/components/listings/FavoritesFilter";
 import Filters from "@/components/listings/Filters";
 import PageResults from "@/components/listings/Pages";
 import SearchBar from "@/components/listings/SearchBar";
+import ResultsNum from "@/components/listings/Results";
+
 const Listings = () => {
   return (
     <div className=" justify-center relative flex flex-col my-24">
@@ -18,6 +20,11 @@ const Listings = () => {
 
           <div className="ml-2 mr-3 mt-10">
             <Filters />
+          </div>
+
+          <div className="ml-2 mr-3 mt-10">
+            {/* {Hard Coded In} */}
+            <ResultsNum Number={10} />
           </div>
         </div>
       </div>
