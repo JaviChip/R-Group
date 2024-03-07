@@ -1,4 +1,3 @@
-import ReviewRating from "@/components/reviews/ReviewRating";
 import WriteAReview from "@/components/reviews/WriteAReview";
 
 const reviews = () => {
