@@ -8,6 +8,10 @@ export const items = [
     link: "listings",
   },
   {
+    name: "FIND USER",
+    link: "profilefinder",
+  },
+  {
     name: "Sign In or Sign Up",
     link: "logIn",
   },
