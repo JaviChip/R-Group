@@ -11,12 +11,14 @@ export const items = [
     name: "FIND USER",
     link: "profilefinder",
   },
+
+  {
+    name: "REVIEWS",
+    link: "reviews",
+  },
+
   {
     name: "Sign In or Sign Up",
     link: "logIn",
-  },
-  {
-    name: "Write Review",
-    link: "writeReviews",
   },
 ];

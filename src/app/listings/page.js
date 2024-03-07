@@ -30,7 +30,7 @@ const Listings = () => {
       </div>
 
       <div className="mt-16 mr-20 ml-5 mb-40 flex row-span-2">
-        <div className="mr-2 ml-3">
+        <div className=" flex-none mr-2 ml-3">
           <ListingApp />
         </div>
       </div>
