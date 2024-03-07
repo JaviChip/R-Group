@@ -46,7 +46,7 @@ const WriteAReview = () => {
             className="border-2 border-black p-2 mt-1"
           ></textarea>
         </div>
-        <button type="submit" className="mt-4">
+        <button type="submit" className="mt-4 bg-slate-300">
           Submit Review
         </button>
       </form>
